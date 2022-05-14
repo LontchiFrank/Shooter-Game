@@ -13,7 +13,7 @@ const shoot = () => {
 const shootCollided = (event) => {
   if (event.detail.body.el.id === "floor") {
     event.detail.body.el.removeEventListener("collide", shootCollided);
-    console.log("Hit the floor")--
+    console.log("Hit the floor");
     myScene.removeChild(event.detail.target.el);
   } else if (event.detail.body.el.id === "target") {
     event.detail.target.el.removeEventListener("collide", shootCollided);
